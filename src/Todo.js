@@ -12,6 +12,12 @@ export default function TodoListItem({ todo, inprogress, id }) {
   function deleteTodo() {
     db.collection('todos').doc(id).delete();
   }
+  function updateTodoItem() {
+    let data = prompt('Enter Your New Data...');
+    db.collection('todos').doc(id).update({
+      todo: data,
+    });
+  }
 
   return (
     <div
@@ -35,10 +41,24 @@ export default function TodoListItem({ todo, inprogress, id }) {
           marginTop: '22px',
           border: '0.5px solid grey',
           textDecoration: 'capitalize',
+          marginLeft: '15px',
         }}
         onClick={deleteTodo}
       >
         Delete
+      </Button>
+      <Button
+        variant="outlined"
+        color="primary"
+        style={{
+          marginTop: '22px',
+          border: '0.5px solid grey',
+          textDecoration: 'capitalize',
+          marginLeft: '20px',
+        }}
+        onClick={updateTodoItem}
+      >
+        Update
       </Button>
     </div>
   );
