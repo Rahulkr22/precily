@@ -28,12 +28,12 @@ export default function TodoListItem({ todo, inprogress, id }) {
       <ListItem>
         <ListItemText
           primary={todo}
-          secondary={inprogress ? 'In Progress' : 'Completed'}
+          // secondary={inprogress ? 'In Progress' : 'Completed'}
         ></ListItemText>
       </ListItem>
-      <button variant="outlined" onClick={toggleInprogress}>
+      {/* <button variant="outlined" onClick={toggleInprogress}>
         {inprogress ? 'Done' : 'Undone'}
-      </button>
+      </button> */}
       <Button
         variant="outlined"
         color="secondary"

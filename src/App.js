@@ -48,12 +48,12 @@ function App() {
             paddingLeft: '150px',
           }}
         >
-          My ToDo List{' '}
+          Your Feedback{' '}
         </h1>
         <form>
           <TextField
             id="standard-basic"
-            label="Write ToDo..."
+            label="Write Something About Precily..."
             value={todoInput}
             style={{
               width: '90vw',
